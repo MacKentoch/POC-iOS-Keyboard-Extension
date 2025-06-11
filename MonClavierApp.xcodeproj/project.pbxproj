@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B64E8812DFA8A4F00381038 /* MonClavierExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B64E85A2DF9514600381038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B64E8422DF9514600381038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B64E8492DF9514600381038;
+			remoteInfo = MonClavierApp;
+		};
+		1B64E8642DF9514600381038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B64E8422DF9514600381038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B64E8492DF9514600381038;
+			remoteInfo = MonClavierApp;
+		};
+		1B64E87F2DFA8A4F00381038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B64E8422DF9514600381038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B64E8792DFA8A4F00381038;
+			remoteInfo = MonClavierExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B64E8862DFA8A4F00381038 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1B64E8812DFA8A4F00381038 /* MonClavierExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B64E84A2DF9514600381038 /* MonClavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonClavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B64E8592DF9514600381038 /* MonClavierAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonClavierAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B64E8632DF9514600381038 /* MonClavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonClavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonClavierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1B64E8822DFA8A4F00381038 /* Exceptions for "MonClavierExtension" folder in "MonClavierExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1B64E8792DFA8A4F00381038 /* MonClavierExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1B64E84C2DF9514600381038 /* MonClavierApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonClavierApp;
+			sourceTree = "<group>";
+		};
+		1B64E85C2DF9514600381038 /* MonClavierAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonClavierAppTests;
+			sourceTree = "<group>";
+		};
+		1B64E8662DF9514600381038 /* MonClavierAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = MonClavierAppUITests;
+			sourceTree = "<group>";
+		};
+		1B64E87B2DFA8A4F00381038 /* MonClavierExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1B64E8822DFA8A4F00381038 /* Exceptions for "MonClavierExtension" folder in "MonClavierExtension" target */,
+			);
+			path = MonClavierExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B64E8472DF9514600381038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8562DF9514600381038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8602DF9514600381038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8772DFA8A4F00381038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B64E8412DF9514600381038 = {
+			isa = PBXGroup;
+			children = (
+				1B64E84C2DF9514600381038 /* MonClavierApp */,
+				1B64E85C2DF9514600381038 /* MonClavierAppTests */,
+				1B64E8662DF9514600381038 /* MonClavierAppUITests */,
+				1B64E87B2DFA8A4F00381038 /* MonClavierExtension */,
+				1B64E84B2DF9514600381038 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B64E84B2DF9514600381038 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B64E84A2DF9514600381038 /* MonClavierApp.app */,
+				1B64E8592DF9514600381038 /* MonClavierAppTests.xctest */,
+				1B64E8632DF9514600381038 /* MonClavierAppUITests.xctest */,
+				1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B64E8492DF9514600381038 /* MonClavierApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B64E86D2DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierApp" */;
+			buildPhases = (
+				1B64E8462DF9514600381038 /* Sources */,
+				1B64E8472DF9514600381038 /* Frameworks */,
+				1B64E8482DF9514600381038 /* Resources */,
+				1B64E8862DFA8A4F00381038 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B64E8802DFA8A4F00381038 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B64E84C2DF9514600381038 /* MonClavierApp */,
+			);
+			name = MonClavierApp;
+			packageProductDependencies = (
+			);
+			productName = MonClavierApp;
+			productReference = 1B64E84A2DF9514600381038 /* MonClavierApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B64E8582DF9514600381038 /* MonClavierAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B64E8702DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierAppTests" */;
+			buildPhases = (
+				1B64E8552DF9514600381038 /* Sources */,
+				1B64E8562DF9514600381038 /* Frameworks */,
+				1B64E8572DF9514600381038 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B64E85B2DF9514600381038 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B64E85C2DF9514600381038 /* MonClavierAppTests */,
+			);
+			name = MonClavierAppTests;
+			packageProductDependencies = (
+			);
+			productName = MonClavierAppTests;
+			productReference = 1B64E8592DF9514600381038 /* MonClavierAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B64E8622DF9514600381038 /* MonClavierAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B64E8732DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierAppUITests" */;
+			buildPhases = (
+				1B64E85F2DF9514600381038 /* Sources */,
+				1B64E8602DF9514600381038 /* Frameworks */,
+				1B64E8612DF9514600381038 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B64E8652DF9514600381038 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B64E8662DF9514600381038 /* MonClavierAppUITests */,
+			);
+			name = MonClavierAppUITests;
+			packageProductDependencies = (
+			);
+			productName = MonClavierAppUITests;
+			productReference = 1B64E8632DF9514600381038 /* MonClavierAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1B64E8792DFA8A4F00381038 /* MonClavierExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B64E8832DFA8A4F00381038 /* Build configuration list for PBXNativeTarget "MonClavierExtension" */;
+			buildPhases = (
+				1B64E8762DFA8A4F00381038 /* Sources */,
+				1B64E8772DFA8A4F00381038 /* Frameworks */,
+				1B64E8782DFA8A4F00381038 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1B64E87B2DFA8A4F00381038 /* MonClavierExtension */,
+			);
+			name = MonClavierExtension;
+			packageProductDependencies = (
+			);
+			productName = MonClavierExtension;
+			productReference = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B64E8422DF9514600381038 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					1B64E8492DF9514600381038 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					1B64E8582DF9514600381038 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 1B64E8492DF9514600381038;
+					};
+					1B64E8622DF9514600381038 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 1B64E8492DF9514600381038;
+					};
+					1B64E8792DFA8A4F00381038 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 1B64E8452DF9514600381038 /* Build configuration list for PBXProject "MonClavierApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B64E8412DF9514600381038;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1B64E84B2DF9514600381038 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B64E8492DF9514600381038 /* MonClavierApp */,
+				1B64E8582DF9514600381038 /* MonClavierAppTests */,
+				1B64E8622DF9514600381038 /* MonClavierAppUITests */,
+				1B64E8792DFA8A4F00381038 /* MonClavierExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B64E8482DF9514600381038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8572DF9514600381038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8612DF9514600381038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8782DFA8A4F00381038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B64E8462DF9514600381038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8552DF9514600381038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E85F2DF9514600381038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B64E8762DFA8A4F00381038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B64E85B2DF9514600381038 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B64E8492DF9514600381038 /* MonClavierApp */;
+			targetProxy = 1B64E85A2DF9514600381038 /* PBXContainerItemProxy */;
+		};
+		1B64E8652DF9514600381038 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B64E8492DF9514600381038 /* MonClavierApp */;
+			targetProxy = 1B64E8642DF9514600381038 /* PBXContainerItemProxy */;
+		};
+		1B64E8802DFA8A4F00381038 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B64E8792DFA8A4F00381038 /* MonClavierExtension */;
+			targetProxy = 1B64E87F2DFA8A4F00381038 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B64E86B2DF9514600381038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1B64E86C2DF9514600381038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B64E86E2DF9514600381038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B64E86F2DF9514600381038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B64E8712DF9514600381038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonClavierApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonClavierApp";
+			};
+			name = Debug;
+		};
+		1B64E8722DF9514600381038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonClavierApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MonClavierApp";
+			};
+			name = Release;
+		};
+		1B64E8742DF9514600381038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MonClavierApp;
+			};
+			name = Debug;
+		};
+		1B64E8752DF9514600381038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MonClavierApp;
+			};
+			name = Release;
+		};
+		1B64E8842DFA8A4F00381038 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonClavierExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonClavierExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierApp.MonClavierExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B64E8852DFA8A4F00381038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P297PK2LTE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonClavierExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonClavierExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.eda.MonClavierApp.MonClavierExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B64E8452DF9514600381038 /* Build configuration list for PBXProject "MonClavierApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B64E86B2DF9514600381038 /* Debug */,
+				1B64E86C2DF9514600381038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B64E86D2DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B64E86E2DF9514600381038 /* Debug */,
+				1B64E86F2DF9514600381038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B64E8702DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B64E8712DF9514600381038 /* Debug */,
+				1B64E8722DF9514600381038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B64E8732DF9514600381038 /* Build configuration list for PBXNativeTarget "MonClavierAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B64E8742DF9514600381038 /* Debug */,
+				1B64E8752DF9514600381038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B64E8832DFA8A4F00381038 /* Build configuration list for PBXNativeTarget "MonClavierExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B64E8842DFA8A4F00381038 /* Debug */,
+				1B64E8852DFA8A4F00381038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B64E8422DF9514600381038 /* Project object */;
+}
