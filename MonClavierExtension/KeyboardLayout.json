@@ -1,0 +1,52 @@
+{
+    "rows": [
+        {
+            "keys": [
+                { "type": { "character": "A" }, "action": { "insert": "a" } },
+                { "type": { "character": "Z" }, "action": { "insert": "z" } },
+                { "type": { "character": "E" }, "action": { "insert": "e" } },
+                { "type": { "character": "R" }, "action": { "insert": "r" } },
+                { "type": { "character": "T" }, "action": { "insert": "t" } },
+                { "type": { "character": "Y" }, "action": { "insert": "y" } },
+                { "type": { "character": "U" }, "action": { "insert": "u" } },
+                { "type": { "character": "I" }, "action": { "insert": "i" } },
+                { "type": { "character": "O" }, "action": { "insert": "o" } },
+                { "type": { "character": "P" }, "action": { "insert": "p" } }
+            ]
+        },
+        {
+            "keys": [
+                { "type": { "character": "Q" }, "action": { "insert": "q" } },
+                { "type": { "character": "S" }, "action": { "insert": "s" } },
+                { "type": { "character": "D" }, "action": { "insert": "d" } },
+                { "type": { "character": "F" }, "action": { "insert": "f" } },
+                { "type": { "character": "G" }, "action": { "insert": "g" } },
+                { "type": { "character": "H" }, "action": { "insert": "h" } },
+                { "type": { "character": "J" }, "action": { "insert": "j" } },
+                { "type": { "character": "K" }, "action": { "insert": "k" } },
+                { "type": { "character": "L" }, "action": { "insert": "l" } },
+                { "type": { "character": "M" }, "action": { "insert": "m" } }
+            ]
+        },
+        {
+            "keys": [
+                { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                { "type": { "character": "W" }, "action": { "insert": "w" } },
+                { "type": { "character": "X" }, "action": { "insert": "x" } },
+                { "type": { "character": "C" }, "action": { "insert": "c" } },
+                { "type": { "character": "V" }, "action": { "insert": "v" } },
+                { "type": { "character": "B" }, "action": { "insert": "b" } },
+                { "type": { "character": "N" }, "action": { "insert": "n" } },
+                { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
+            ]
+        },
+        {
+            "keys": [
+                { "type": { "character": "123" }, "action": { "switchKeyboard": {} }, "width": 80 },
+                { "type": { "svgImage": "smiley" }, "action": { "insert": "😀" } },
+                { "type": { "character": "espace" }, "action": { "space": {} } },
+                { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+            ]
+        }
+    ]
+}
