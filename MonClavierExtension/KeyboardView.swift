@@ -118,7 +118,6 @@ struct KeyButton: View {
                     Image(systemName: imageName)
                 case .svgImage(let imageName):
                     SVGView(named: imageName)
-                        .padding(8)
                 }
             }
             .font(.system(size: 18, weight: .regular))
