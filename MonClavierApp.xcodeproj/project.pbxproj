@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B64E8812DFA8A4F00381038 /* MonClavierExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1B64E88B2DFD656D00381038 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 1B64E88A2DFD656D00381038 /* SwiftSVG */; };
-		1B64E9282DFDCFB500381038 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B64E9272DFDCFAF00381038 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,7 +335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B64E9282DFDCFB500381038 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
