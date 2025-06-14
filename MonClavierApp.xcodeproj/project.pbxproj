@@ -63,30 +63,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				SVG/100.svg,
-				SVG/ANGER.svg,
-				SVG/ASTONISHED.svg,
-				SVG/COLD_SWEAT.svg,
-				SVG/COOL.svg,
-				SVG/CRY.svg,
-				SVG/GHOST.svg,
-				SVG/GITLAB.svg,
-				SVG/GUITARE.svg,
-				SVG/MONKEY_EAR.svg,
-				SVG/MONKEY_EYE.svg,
-				SVG/MONKEY_MONTH.svg,
-				SVG/OK.svg,
-				SVG/PERFECT.svg,
-				SVG/PHONE.svg,
-				SVG/SAD.svg,
-				SVG/SHOCKED.svg,
-				SVG/SMILE_SWEAT.svg,
-				SVG/SPACE_INVADER.svg,
-				SVG/TALK_BUBBLE.svg,
-				SVG/VICTORY.svg,
-				SVG/WEARY_FACE.svg,
-				SVG/YAWNING_FACE.svg,
-				SVG/YOU_ROCK.svg,
 			);
 			target = 1B64E8792DFA8A4F00381038 /* MonClavierExtension */;
 		};
@@ -112,6 +88,9 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				1B64E8822DFA8A4F00381038 /* Exceptions for "MonClavierExtension" folder in "MonClavierExtension" target */,
+			);
+			explicitFolders = (
+				SVG,
 			);
 			path = MonClavierExtension;
 			sourceTree = "<group>";

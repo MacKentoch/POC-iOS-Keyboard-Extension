@@ -1,6 +1,8 @@
 import SwiftUI
 import SwiftSVG
 
+private class BundleFinder {}
+
 struct SVGView: UIViewRepresentable {
     let named: String
     var contentMode: UIView.ContentMode = .scaleAspectFit
@@ -8,7 +10,12 @@ struct SVGView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let uiView = UIView()
         
-        if let svgURL = Bundle.main.url(forResource: named, withExtension: "svg", subdirectory: "SVG") {
+        let keyBoardExtensionBundle = Bundle(for: BundleFinder.self)
+        if let svgURL = keyBoardExtensionBundle.url(
+            forResource: named,
+            withExtension: "svg",
+            subdirectory: "SVG"
+        ) {
             print("URL trouvée : \(svgURL)")
             let svgLayer = CALayer(svgURL: svgURL) { layer in
                 layer.frame = uiView.bounds
