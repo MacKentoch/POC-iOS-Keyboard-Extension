@@ -10,7 +10,7 @@ Example
     "rows": [
         {
             "keys": [
-                { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" } },
+                { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
                 { "type": { "character": "O" }, "action": { "insert": "b" } },
                 { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
                 
@@ -18,3 +18,10 @@ Example
         },
 ```
 
+### NOTE: svg should be sized to 128x128
+ 
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- ... ... -->
+</svg>
+```
