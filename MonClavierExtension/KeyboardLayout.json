@@ -2,48 +2,48 @@
     "rows": [
         {
             "keys": [
-                { "type": { "character": "A" }, "action": { "insert": "a" } },
-                { "type": { "character": "Z" }, "action": { "insert": "z" } },
-                { "type": { "character": "E" }, "action": { "insert": "e" } },
-                { "type": { "character": "R" }, "action": { "insert": "r" } },
-                { "type": { "character": "T" }, "action": { "insert": "t" } },
-                { "type": { "character": "Y" }, "action": { "insert": "y" } },
-                { "type": { "character": "U" }, "action": { "insert": "u" } },
-                { "type": { "character": "I" }, "action": { "insert": "i" } },
-                { "type": { "character": "O" }, "action": { "insert": "o" } },
-                { "type": { "character": "P" }, "action": { "insert": "p" } }
+                { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" } },
+                { "type": { "svgImage": "MONKEY_EAR" }, "action": { "insert": "🙉" } },
+                { "type": { "svgImage": "MONKEY_MONTH" }, "action": { "insert": "🙊" } },
+                { "type": { "svgImage": "OK" }, "action": { "insert": "👍" } },
+                { "type": { "svgImage": "100" }, "action": { "insert": "💯" } },
+                { "type": { "svgImage": "ANGER" }, "action": { "insert": "😤" } },
+                { "type": { "svgImage": "ASTONISHED" }, "action": { "insert": "😲" } },
+                { "type": { "svgImage": "COLD_SWEAT" }, "action": { "insert": "😓" } },
+                { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" } },
+                { "type": { "svgImage": "CRY" }, "action": { "insert": "😭" } }
             ]
         },
         {
             "keys": [
-                { "type": { "character": "Q" }, "action": { "insert": "q" } },
-                { "type": { "character": "S" }, "action": { "insert": "s" } },
-                { "type": { "character": "D" }, "action": { "insert": "d" } },
-                { "type": { "character": "F" }, "action": { "insert": "f" } },
-                { "type": { "character": "G" }, "action": { "insert": "g" } },
-                { "type": { "character": "H" }, "action": { "insert": "h" } },
-                { "type": { "character": "J" }, "action": { "insert": "j" } },
-                { "type": { "character": "K" }, "action": { "insert": "k" } },
-                { "type": { "character": "L" }, "action": { "insert": "l" } },
-                { "type": { "character": "M" }, "action": { "insert": "m" } }
+                { "type": { "svgImage": "GHOST" }, "action": { "insert": "👻" } },
+                { "type": { "svgImage": "GITLAB" }, "action": { "insert": "Hum... Just Gitlab 😅" } },
+                { "type": { "svgImage": "GUITARE" }, "action": { "insert": "🎸" } },
+                { "type": { "svgImage": "PHONE" }, "action": { "insert": "📱" } },
+                { "type": { "svgImage": "SAD" }, "action": { "insert": "😢" } },
+                { "type": { "svgImage": "SHOCKED" }, "action": { "insert": "😱" } },
+                { "type": { "svgImage": "SMILE_SWEAT" }, "action": { "insert": "😅" } },
+                { "type": { "svgImage": "SPACE_INVADER" }, "action": { "insert": "👾" } },
+                { "type": { "svgImage": "TALK_BUBBLE" }, "action": { "insert": "💬" } },
+                { "type": { "svgImage": "VICTORY" }, "action": { "insert": "✌️" } }
             ]
         },
         {
             "keys": [
                 { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
-                { "type": { "character": "W" }, "action": { "insert": "w" } },
-                { "type": { "character": "X" }, "action": { "insert": "x" } },
-                { "type": { "character": "C" }, "action": { "insert": "c" } },
-                { "type": { "character": "V" }, "action": { "insert": "v" } },
-                { "type": { "character": "B" }, "action": { "insert": "b" } },
-                { "type": { "character": "N" }, "action": { "insert": "n" } },
+                { "type": { "svgImage": "WEARY_FACE" }, "action": { "insert": "😫" } },
+                { "type": { "svgImage": "YAWLING_FACE" }, "action": { "insert": "🥱" } },
+                { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" } },
+                { "type": { "character": "T" }, "action": { "insert": "v" } },
+                { "type": { "character": "O" }, "action": { "insert": "b" } },
+                { "type": { "character": "P" }, "action": { "insert": "n" } },
                 { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
             ]
         },
         {
             "keys": [
                 { "type": { "character": "123" }, "action": { "switchKeyboard": {} }, "width": 80 },
-                { "type": { "svgImage": "smiley" }, "action": { "insert": "😀" } },
+                { "type": { "svgImage": "PERFECT" }, "action": { "insert": "👌" } },
                 { "type": { "character": "espace" }, "action": { "space": {} } },
                 { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
             ]
