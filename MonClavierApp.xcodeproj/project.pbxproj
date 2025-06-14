@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B64E8812DFA8A4F00381038 /* MonClavierExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1B64E88B2DFD656D00381038 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 1B64E88A2DFD656D00381038 /* SwiftSVG */; };
+		1B64E9282DFDCFB500381038 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B64E9272DFDCFAF00381038 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1B64E8592DF9514600381038 /* MonClavierAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonClavierAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B64E8632DF9514600381038 /* MonClavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonClavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonClavierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B64E9272DFDCFAF00381038 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,7 +63,30 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				SVG,
+				SVG/100.svg,
+				SVG/ANGER.svg,
+				SVG/ASTONISHED.svg,
+				SVG/COLD_SWEAT.svg,
+				SVG/COOL.svg,
+				SVG/CRY.svg,
+				SVG/GHOST.svg,
+				SVG/GITLAB.svg,
+				SVG/GUITARE.svg,
+				SVG/MONKEY_EAR.svg,
+				SVG/MONKEY_EYE.svg,
+				SVG/MONKEY_MONTH.svg,
+				SVG/OK.svg,
+				SVG/PERFECT.svg,
+				SVG/PHONE.svg,
+				SVG/SAD.svg,
+				SVG/SHOCKED.svg,
+				SVG/SMILE_SWEAT.svg,
+				SVG/SPACE_INVADER.svg,
+				SVG/TALK_BUBBLE.svg,
+				SVG/VICTORY.svg,
+				SVG/WEARY_FACE.svg,
+				SVG/YAWNING_FACE.svg,
+				SVG/YOU_ROCK.svg,
 			);
 			target = 1B64E8792DFA8A4F00381038 /* MonClavierExtension */;
 		};
@@ -87,9 +112,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				1B64E8822DFA8A4F00381038 /* Exceptions for "MonClavierExtension" folder in "MonClavierExtension" target */,
-			);
-			explicitFolders = (
-				SVG,
 			);
 			path = MonClavierExtension;
 			sourceTree = "<group>";
@@ -132,6 +154,7 @@
 		1B64E8412DF9514600381038 = {
 			isa = PBXGroup;
 			children = (
+				1B64E9272DFDCFAF00381038 /* README.md */,
 				1B64E84C2DF9514600381038 /* MonClavierApp */,
 				1B64E85C2DF9514600381038 /* MonClavierAppTests */,
 				1B64E8662DF9514600381038 /* MonClavierAppUITests */,
@@ -334,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B64E9282DFDCFB500381038 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
