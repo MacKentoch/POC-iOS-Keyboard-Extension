@@ -61,6 +61,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				SVG,
 			);
 			target = 1B64E8792DFA8A4F00381038 /* MonClavierExtension */;
 		};
@@ -86,6 +87,9 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				1B64E8822DFA8A4F00381038 /* Exceptions for "MonClavierExtension" folder in "MonClavierExtension" target */,
+			);
+			explicitFolders = (
+				SVG,
 			);
 			path = MonClavierExtension;
 			sourceTree = "<group>";
