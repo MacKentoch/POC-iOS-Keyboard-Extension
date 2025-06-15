@@ -2,14 +2,15 @@
     "rows": [
         {
             "keys": [
+                { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" }, "width": 45 },
                 { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
                 { "type": { "svgImage": "MONKEY_EAR" }, "action": { "insert": "🙉" }, "width": 45 },
                 { "type": { "svgImage": "MONKEY_MONTH" }, "action": { "insert": "🙊" }, "width": 45 },
                 { "type": { "svgImage": "OK" }, "action": { "insert": "👍" }, "width": 45 },
                 { "type": { "svgImage": "100" }, "action": { "insert": "💯" }, "width": 45 },
                 { "type": { "svgImage": "ASTONISHED" }, "action": { "insert": "😲" }, "width": 45 },
-                { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" }, "width": 45 },
-                { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" }, "width": 45 }
+                { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" }, "width": 45 }
+                
             ]
         },
         {

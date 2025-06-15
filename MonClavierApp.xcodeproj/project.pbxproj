@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B64E8812DFA8A4F00381038 /* MonClavierExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1B64E88B2DFD656D00381038 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 1B64E88A2DFD656D00381038 /* SwiftSVG */; };
+		1BC6992D2DFEA7EE00AA27F8 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6992C2DFEA7EE00AA27F8 /* SVGKit */; };
+		1BC6992F2DFEA7EE00AA27F8 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6992E2DFEA7EE00AA27F8 /* SVGKitSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC6992F2DFEA7EE00AA27F8 /* SVGKitSwift in Frameworks */,
+				1BC6992D2DFEA7EE00AA27F8 /* SVGKit in Frameworks */,
 				1B64E88B2DFD656D00381038 /* SwiftSVG in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +247,8 @@
 			name = MonClavierExtension;
 			packageProductDependencies = (
 				1B64E88A2DFD656D00381038 /* SwiftSVG */,
+				1BC6992C2DFEA7EE00AA27F8 /* SVGKit */,
+				1BC6992E2DFEA7EE00AA27F8 /* SVGKitSwift */,
 			);
 			productName = MonClavierExtension;
 			productReference = 1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */;
@@ -285,6 +291,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1B64E8892DFD656D00381038 /* XCRemoteSwiftPackageReference "SwiftSVG" */,
+				1BC6992B2DFEA78F00AA27F8 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1B64E84B2DF9514600381038 /* Products */;
@@ -756,6 +763,14 @@
 				kind = branch;
 			};
 		};
+		1BC6992B2DFEA78F00AA27F8 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -763,6 +778,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B64E8892DFD656D00381038 /* XCRemoteSwiftPackageReference "SwiftSVG" */;
 			productName = SwiftSVG;
+		};
+		1BC6992C2DFEA7EE00AA27F8 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BC6992B2DFEA78F00AA27F8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		1BC6992E2DFEA7EE00AA27F8 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1BC6992B2DFEA78F00AA27F8 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
