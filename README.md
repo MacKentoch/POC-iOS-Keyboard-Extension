@@ -6,7 +6,9 @@ Magic done thanks to [SVGKit]](github.com/SVGKit/SVGKit) 🪄
 
 Preview
 
-![preview](/preview.png)
+| Keyboard                          | input                           |
+| --------------------------------- | ------------------------------- |
+| ![Keyboard preview](/preview.png) | ![input preview](/preview2.png) |
 
 > Easily maintainable by just editing a JSON file `KeyboardLayout.json` supporting JSON SVG as Button image.
 
