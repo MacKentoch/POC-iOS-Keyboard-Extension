@@ -132,7 +132,7 @@ struct KeyButton: View {
                     .frame(maxWidth: .infinity, minHeight: 45)
             }
         }
-        .background(Color(uiColor: .systemGray4))
+        .background(Color.gray.opacity(0.1))
         .cornerRadius(8)
         .shadow(color: Color.black.opacity(0.15), radius: 1, y: 1)
     }
@@ -162,7 +162,6 @@ struct KeyboardView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(3)
-        .background(Color(uiColor: .systemGray6))
     }
 
     private func handleAction(_ action: KeyAction) {

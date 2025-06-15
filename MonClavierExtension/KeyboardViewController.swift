@@ -18,6 +18,7 @@ class KeyboardViewController: UIInputViewController {
         
         // 4. Désactiver la traduction des contraintes automatiques
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        hostingController.view.backgroundColor = UIColor.clear
         
         // 5. Configurer les contraintes pour que la vue SwiftUI remplisse tout l'espace
         NSLayoutConstraint.activate([
