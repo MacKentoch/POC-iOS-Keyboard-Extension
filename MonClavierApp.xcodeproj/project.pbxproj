@@ -11,6 +11,7 @@
 		1B64E88B2DFD656D00381038 /* SwiftSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 1B64E88A2DFD656D00381038 /* SwiftSVG */; };
 		1BC6992D2DFEA7EE00AA27F8 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6992C2DFEA7EE00AA27F8 /* SVGKit */; };
 		1BC6992F2DFEA7EE00AA27F8 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6992E2DFEA7EE00AA27F8 /* SVGKitSwift */; };
+		1BC6994B2DFEAEDE00AA27F8 /* preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6994A2DFEAEDE00AA27F8 /* preview.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1B64E8632DF9514600381038 /* MonClavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonClavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B64E87A2DFA8A4F00381038 /* MonClavierExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonClavierExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B64E9272DFDCFAF00381038 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		1BC6994A2DFEAEDE00AA27F8 /* preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -136,6 +138,7 @@
 		1B64E8412DF9514600381038 = {
 			isa = PBXGroup;
 			children = (
+				1BC6994A2DFEAEDE00AA27F8 /* preview.png */,
 				1B64E9272DFDCFAF00381038 /* README.md */,
 				1B64E84C2DF9514600381038 /* MonClavierApp */,
 				1B64E85C2DF9514600381038 /* MonClavierAppTests */,
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC6994B2DFEAEDE00AA27F8 /* preview.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

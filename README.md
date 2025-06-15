@@ -1,10 +1,17 @@
-# iOS Keyboard extension  POC
+# iOS Keyboard extension POC
 
-A SwiftUI keyboard embeded in UIKit extension (no choice extension are UIKIT).
+A **SwiftUI** keyboard embeded in UIKit extension (_no choice extensions are UIKIT based_).
+
+Magic done thanks to [SVGKit]](github.com/SVGKit/SVGKit) 🪄
+
+Preview
+
+![preview](/preview.png)
 
 > Easily maintainable by just editing a JSON file `KeyboardLayout.json` supporting JSON SVG as Button image.
 
 Example
+
 ```JSON
 {
     "rows": [
@@ -13,15 +20,7 @@ Example
                 { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
                 { "type": { "character": "O" }, "action": { "insert": "b" } },
                 { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
-                
+
             ]
         },
-```
-
-### NOTE: svg should be sized to 128x128
- 
-```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-    <!-- ... ... -->
-</svg>
 ```
