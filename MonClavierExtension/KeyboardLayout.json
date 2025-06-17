@@ -27,7 +27,6 @@
                 },
                 {
                     "keys": [
-                        { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
                         { "type": { "character": "PASSWORD" }, "action": { "insert": "123456 (super secret password)" },  },
                         { "type": { "character": "ANYTHING" }, "action": { "insert": "Actually: \"ANYTHING\"" },  },
                         { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
@@ -35,9 +34,10 @@
                 },
                 {
                     "keys": [
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
                         { "type": { "character": "espace" }, "action": { "space": {} } },
-                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 },
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
                     ]
                 }
             ]
@@ -60,7 +60,6 @@
                 },
                 {
                     "keys": [
-                        { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
                         { "type": { "character": "PASSWORD" }, "action": { "insert": "123456 (super secret password)" },  },
                         { "type": { "character": "ANYTHING" }, "action": { "insert": "Actually: \"ANYTHING\"" },  },
                         { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
@@ -68,9 +67,10 @@
                 },
                 {
                     "keys": [
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
                         { "type": { "character": "espace" }, "action": { "space": {} } },
-                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 },
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
                     ]
                 }
             ]

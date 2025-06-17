@@ -8,10 +8,11 @@ enum KeyAction: Codable, Hashable {
     case insert(String)
     case backspace
     case space
-    case switchKeyboard
+    case switchToNextKeyboard
+    case switchToPreviousKeyboard
     
     enum CodingKeys: String, CodingKey {
-        case insert, backspace, space, switchKeyboard
+        case insert, backspace, space, switchToNextKeyboard, switchToPreviousKeyboard
     }
     
     init(from decoder: Decoder) throws {
@@ -22,8 +23,10 @@ enum KeyAction: Codable, Hashable {
             self = .backspace
         } else if container.contains(.space) {
             self = .space
-        } else if container.contains(.switchKeyboard) {
-            self = .switchKeyboard
+        } else if container.contains(.switchToNextKeyboard) {
+            self = .switchToNextKeyboard
+        } else if container.contains(.switchToPreviousKeyboard) {
+            self = .switchToPreviousKeyboard
         } else {
             throw DecodingError.dataCorrupted(
                 DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Action de clé non valide")
@@ -40,8 +43,10 @@ enum KeyAction: Codable, Hashable {
             try container.encode(EmptyCodable(), forKey: .backspace)
         case .space:
             try container.encode(EmptyCodable(), forKey: .space)
-        case .switchKeyboard:
-            try container.encode(EmptyCodable(), forKey: .switchKeyboard)
+        case .switchToNextKeyboard:
+            try container.encode(EmptyCodable(), forKey: .switchToNextKeyboard)
+        case .switchToPreviousKeyboard:
+            try container.encode(EmptyCodable(), forKey: .switchToPreviousKeyboard)
         }
     }
 }
@@ -139,11 +144,18 @@ struct KeyButton: View {
 
 
 // MARK: - Vue Principale du Clavier
+fileprivate enum KeyboardAnimationDirection {
+    case forward
+    case backward
+}
+
 struct KeyboardView: View {
     var textDocumentProxy: UITextDocumentProxy
     
     @State private var allKeyboardLayouts: [KeyboardLayout] = []
     @State private var currentKeyboardIndex: Int = 0
+    
+    @State private var animationDirection: KeyboardAnimationDirection = .forward
     
     private var currentKeyboardLayout: KeyboardLayout? {
         guard !allKeyboardLayouts.isEmpty, allKeyboardLayouts.indices.contains(currentKeyboardIndex) else {
@@ -151,6 +163,16 @@ struct KeyboardView: View {
         }
         return allKeyboardLayouts[currentKeyboardIndex]
     }
+    
+    private let forwardTransition: AnyTransition = .asymmetric(
+        insertion: .move(edge: .trailing).combined(with: .opacity),
+        removal: .move(edge: .leading).combined(with: .opacity)
+    )
+    
+    private let backwardTransition: AnyTransition = .asymmetric(
+        insertion: .move(edge: .leading).combined(with: .opacity),
+        removal: .move(edge: .trailing).combined(with: .opacity)
+    )
     
     var body: some View {
         VStack(spacing: 8) {
@@ -169,6 +191,7 @@ struct KeyboardView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(3)
+        .transition(animationDirection == .forward ? forwardTransition : backwardTransition)
         .id(currentKeyboardIndex) // Changer l'id force la vue à se redessiner complètement lors du switch
     }
     
@@ -182,10 +205,32 @@ struct KeyboardView: View {
             textDocumentProxy.deleteBackward()
         case .space:
             textDocumentProxy.insertText(" ")
-        case .switchKeyboard:
+        case .switchToNextKeyboard:
             guard !allKeyboardLayouts.isEmpty else { return }
-            
+            switchToNextKeyboard()
+        case .switchToPreviousKeyboard:
+            guard !allKeyboardLayouts.isEmpty else { return }
+            switchToPreviousKeyboard()
+        }
+    }
+    
+    private func switchToNextKeyboard() {
+        guard !allKeyboardLayouts.isEmpty else { return }
+        animationDirection = .forward
+        
+        withAnimation(.easeInOut(duration: 0.25)) {
             currentKeyboardIndex = (currentKeyboardIndex + 1) % allKeyboardLayouts.count
+        }
+    }
+    
+    private func switchToPreviousKeyboard() {
+        guard !allKeyboardLayouts.isEmpty else { return }
+        animationDirection = .backward
+        
+        withAnimation(.easeInOut(duration: 0.25)) {
+            let count = allKeyboardLayouts.count
+            
+            currentKeyboardIndex = (currentKeyboardIndex - 1 + count) % count // modulo for negative numbers in Swift.
         }
     }
     
