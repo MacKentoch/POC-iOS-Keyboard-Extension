@@ -1,41 +1,78 @@
 {
-    "rows": [
+    "keyboards": [
         {
-            "keys": [
-                { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" }, "width": 45 },
-                { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
-                { "type": { "svgImage": "MONKEY_EAR" }, "action": { "insert": "🙉" }, "width": 45 },
-                { "type": { "svgImage": "MONKEY_MONTH" }, "action": { "insert": "🙊" }, "width": 45 },
-                { "type": { "svgImage": "OK" }, "action": { "insert": "👍" }, "width": 45 },
-                { "type": { "svgImage": "100" }, "action": { "insert": "💯" }, "width": 45 },
-                { "type": { "svgImage": "ASTONISHED" }, "action": { "insert": "😲" }, "width": 45 },
-                { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" }, "width": 45 }
-                
+            "rows": [
+                {
+                    "keys": [
+                        { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_EAR" }, "action": { "insert": "🙉" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_MONTH" }, "action": { "insert": "🙊" }, "width": 45 },
+                        { "type": { "svgImage": "OK" }, "action": { "insert": "👍" }, "width": 45 },
+                        { "type": { "svgImage": "100" }, "action": { "insert": "💯" }, "width": 45 },
+                        { "type": { "svgImage": "ASTONISHED" }, "action": { "insert": "😲" }, "width": 45 },
+                        { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" }, "width": 45 }
+                        
+                    ]
+                },
+                {
+                    "keys": [
+                        { "type": { "svgImage": "GHOST" }, "action": { "insert": "👻" }, "width": 45 },
+                        { "type": { "svgImage": "GUITARE" }, "action": { "insert": "🎸" }, "width": 45 },
+                        { "type": { "svgImage": "PHONE" }, "action": { "insert": "📱" }, "width": 45 },
+                        { "type": { "svgImage": "SPACE_INVADER" }, "action": { "insert": "👾" }, "width": 45 },
+                        { "type": { "svgImage": "PERFECT" }, "action": { "insert": "👌" }, "width": 45  },
+                        { "type": { "svgImage": "TALK_BUBBLE" }, "action": { "insert": "💬" }, "width": 45 },
+                    ]
+                },
+                {
+                    "keys": [
+                        { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "character": "PASSWORD" }, "action": { "insert": "123456 (super secret password)" },  },
+                        { "type": { "character": "ANYTHING" }, "action": { "insert": "Actually: \"ANYTHING\"" },  },
+                        { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
+                    ]
+                },
+                {
+                    "keys": [
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "character": "espace" }, "action": { "space": {} } },
+                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+                    ]
+                }
             ]
+            
         },
         {
-            "keys": [
-                { "type": { "svgImage": "GHOST" }, "action": { "insert": "👻" }, "width": 45 },
-                { "type": { "svgImage": "GUITARE" }, "action": { "insert": "🎸" }, "width": 45 },
-                { "type": { "svgImage": "PHONE" }, "action": { "insert": "📱" }, "width": 45 },
-                { "type": { "svgImage": "SPACE_INVADER" }, "action": { "insert": "👾" }, "width": 45 },
-                { "type": { "svgImage": "PERFECT" }, "action": { "insert": "👌" }, "width": 45  },
-                { "type": { "svgImage": "TALK_BUBBLE" }, "action": { "insert": "💬" }, "width": 45 },
-            ]
-        },
-        {
-            "keys": [
-                { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
-                { "type": { "character": "PASSWORD" }, "action": { "insert": "123456 (super secret password)" },  },
-                { "type": { "character": "ANYTHING" }, "action": { "insert": "Actually: \"ANYTHING\"" },  },
-                { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
-            ]
-        },
-        {
-            "keys": [
-                { "type": { "character": "123" }, "action": { "switchKeyboard": {} }, "width": 80 },
-                { "type": { "character": "espace" }, "action": { "space": {} } },
-                { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+            "rows": [
+                {
+                    "keys": [
+                        { "type": { "svgImage": "100" }, "action": { "insert": "💯" }, "width": 45 },
+                        { "type": { "svgImage": "ASTONISHED" }, "action": { "insert": "😲" }, "width": 45 },
+                        { "type": { "svgImage": "YOU_ROCK" }, "action": { "insert": "🤘" }, "width": 45 },
+                        { "type": { "svgImage": "OK" }, "action": { "insert": "👍" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_EYE" }, "action": { "insert": "🙈" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_EAR" }, "action": { "insert": "🙉" }, "width": 45 },
+                        { "type": { "svgImage": "MONKEY_MONTH" }, "action": { "insert": "🙊" }, "width": 45 },
+                        { "type": { "svgImage": "COOL" }, "action": { "insert": "😎" }, "width": 45 }
+                        
+                    ]
+                },
+                {
+                    "keys": [
+                        { "type": { "systemImage": "shift.fill" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "character": "PASSWORD" }, "action": { "insert": "123456 (super secret password)" },  },
+                        { "type": { "character": "ANYTHING" }, "action": { "insert": "Actually: \"ANYTHING\"" },  },
+                        { "type": { "systemImage": "delete.left.fill" }, "action": { "backspace": {} }, "width": 45 }
+                    ]
+                },
+                {
+                    "keys": [
+                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchKeyboard": {} }, "width": 45 },
+                        { "type": { "character": "espace" }, "action": { "space": {} } },
+                        { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 }
+                    ]
+                }
             ]
         }
     ]

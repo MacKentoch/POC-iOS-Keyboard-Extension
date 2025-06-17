@@ -2,22 +2,18 @@ import SwiftUI
 
 // MARK: - Modèles de Données
 
-// Petite structure vide pour représenter un objet JSON vide `{}`
 fileprivate struct EmptyCodable: Codable {}
 
-// --- Énumération KeyAction avec son implémentation Codable manuelle ---
 enum KeyAction: Codable, Hashable {
     case insert(String)
     case backspace
     case space
     case switchKeyboard
-
-    // Les clés que nous nous attendons à trouver dans le JSON pour l'action
+    
     enum CodingKeys: String, CodingKey {
         case insert, backspace, space, switchKeyboard
     }
-
-    // Comment transformer le JSON en une de nos énumérations
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try container.decodeIfPresent(String.self, forKey: .insert) {
@@ -34,8 +30,7 @@ enum KeyAction: Codable, Hashable {
             )
         }
     }
-
-    // Comment transformer une de nos énumérations en JSON
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
@@ -56,11 +51,11 @@ enum KeyType: Codable, Hashable {
     case character(String)
     case systemImage(String)
     case svgImage(String)
-
+    
     enum CodingKeys: String, CodingKey {
         case character, systemImage, svgImage
     }
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try container.decodeIfPresent(String.self, forKey: .character) { self = .character(value) }
@@ -68,7 +63,7 @@ enum KeyType: Codable, Hashable {
         else if let value = try container.decodeIfPresent(String.self, forKey: .svgImage) { self = .svgImage(value) }
         else { throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "KeyType non valide")) }
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
@@ -84,7 +79,7 @@ struct Key: Codable, Identifiable, Hashable {
     let type: KeyType
     let action: KeyAction
     var width: CGFloat?
-
+    
     enum CodingKeys: String, CodingKey {
         case type, action, width
     }
@@ -96,6 +91,10 @@ struct KeyboardRow: Codable, Identifiable, Hashable {
     enum CodingKeys: String, CodingKey { case keys }
 }
 
+struct KeyboardCollection: Codable {
+    let keyboards: [KeyboardLayout]
+}
+
 struct KeyboardLayout: Codable {
     let rows: [KeyboardRow]
 }
@@ -105,7 +104,7 @@ struct KeyboardLayout: Codable {
 struct KeyButton: View {
     let key: Key
     let action: (KeyAction) -> Void
-
+    
     var body: some View {
         Button(action: {
             action(key.action)
@@ -120,9 +119,9 @@ struct KeyButton: View {
                     SVGView(named: imageName)
                 }
             }
-            .font(.system(size: 18, weight: .regular))
-            .foregroundColor(.primary)
-
+                .font(.system(size: 18, weight: .regular))
+                .foregroundColor(.primary)
+            
             if let fixedWidth = key.width {
                 buttonContent
                     .frame(width: fixedWidth)
@@ -143,11 +142,19 @@ struct KeyButton: View {
 struct KeyboardView: View {
     var textDocumentProxy: UITextDocumentProxy
     
-    @State private var keyboardLayout: KeyboardLayout?
-
+    @State private var allKeyboardLayouts: [KeyboardLayout] = []
+    @State private var currentKeyboardIndex: Int = 0
+    
+    private var currentKeyboardLayout: KeyboardLayout? {
+        guard !allKeyboardLayouts.isEmpty, allKeyboardLayouts.indices.contains(currentKeyboardIndex) else {
+            return nil
+        }
+        return allKeyboardLayouts[currentKeyboardIndex]
+    }
+    
     var body: some View {
         VStack(spacing: 8) {
-            if let layout = keyboardLayout {
+            if let layout = currentKeyboardLayout {
                 ForEach(layout.rows) { row in
                     HStack(spacing: 4) {
                         ForEach(row.keys) { key in
@@ -157,16 +164,17 @@ struct KeyboardView: View {
                 }
             } else {
                 ProgressView()
-                    .onAppear(perform: loadLayout)
+                    .onAppear(perform: loadAllLayouts)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(3)
+        .id(currentKeyboardIndex) // Changer l'id force la vue à se redessiner complètement lors du switch
     }
-
+    
     private func handleAction(_ action: KeyAction) {
         UIDevice.current.playInputClick()
-
+        
         switch action {
         case .insert(let text):
             textDocumentProxy.insertText(text)
@@ -175,41 +183,27 @@ struct KeyboardView: View {
         case .space:
             textDocumentProxy.insertText(" ")
         case .switchKeyboard:
-            print("Changement de clavier demandé. Implémentez la logique ici.")
+            guard !allKeyboardLayouts.isEmpty else { return }
+            
+            currentKeyboardIndex = (currentKeyboardIndex + 1) % allKeyboardLayouts.count
         }
     }
     
-    private func loadLayout() {
+    private func loadAllLayouts() {
         guard let url = Bundle.main.url(forResource: "KeyboardLayout", withExtension: "json") else {
             fatalError("Fichier KeyboardLayout.json introuvable.")
         }
         do {
             let data = try Data(contentsOf: url)
-            self.keyboardLayout = try JSONDecoder().decode(KeyboardLayout.self, from: data)
+            let collection = try JSONDecoder().decode(KeyboardCollection.self, from: data)
+            
+            self.allKeyboardLayouts = collection.keyboards
+            self.currentKeyboardIndex = 0
         } catch {
-            // Un message d'erreur plus détaillé pendant le développement
             print("----- ERREUR DE DÉCODAGE JSON -----")
             print(error)
-            if let decodingError = error as? DecodingError {
-                print("----- DÉTAILS DE L'ERREUR -----")
-                switch decodingError {
-                case .typeMismatch(let type, let context):
-                    print("Type Mismatch: \(type) in \(context.debugDescription)")
-                    print("Coding Path: \(context.codingPath)")
-                case .valueNotFound(let type, let context):
-                    print("Value Not Found: \(type) in \(context.debugDescription)")
-                    print("Coding Path: \(context.codingPath)")
-                case .keyNotFound(let key, let context):
-                    print("Key Not Found: \(key) in \(context.debugDescription)")
-                    print("Coding Path: \(context.codingPath)")
-                case .dataCorrupted(let context):
-                    print("Data Corrupted: \(context.debugDescription)")
-                    print("Coding Path: \(context.codingPath)")
-                @unknown default:
-                    fatalError("Nouvelle erreur de décodage non gérée")
-                }
-            }
             fatalError("Échec du décodage du JSON. Voir la console pour les détails.")
         }
     }
+    
 }
