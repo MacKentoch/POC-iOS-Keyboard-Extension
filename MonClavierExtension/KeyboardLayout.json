@@ -34,10 +34,10 @@
                 },
                 {
                     "keys": [
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
+                        { "type": { "svgImage": "LEFT_ARROW" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
                         { "type": { "character": "espace" }, "action": { "space": {} } },
                         { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 },
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
+                        { "type": { "svgImage": "RIGHT_ARROW" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
                     ]
                 }
             ]
@@ -67,10 +67,10 @@
                 },
                 {
                     "keys": [
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
+                        { "type": { "svgImage": "LEFT_ARROW" }, "action": { "switchToPreviousKeyboard": {} }, "width": 45 },
                         { "type": { "character": "espace" }, "action": { "space": {} } },
                         { "type": { "systemImage": "return" }, "action": { "insert": "\n" }, "width": 80 },
-                        { "type": { "svgImage": "KEYBOARD" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
+                        { "type": { "svgImage": "RIGHT_ARROW" }, "action": { "switchToNextKeyboard": {} }, "width": 45 }
                     ]
                 }
             ]
