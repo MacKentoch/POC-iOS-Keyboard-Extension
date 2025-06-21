@@ -1,4 +1,3 @@
-// DetailView.swift
 import SwiftUI
 
 struct DetailView: View {
@@ -12,20 +11,19 @@ struct DetailView: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
             
-            Text("! . .")
+            Text("SOMETHING")
                 .font(.title)
                 .foregroundColor(.secondary)
             
             Spacer()
         }
         .padding()
-        .navigationTitle("Scène de Détail") // Titre de la nouvelle vue
+        .navigationTitle("Scène de Détail")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    // Pour prévisualiser la DetailView dans un contexte de navigation
     NavigationStack {
         DetailView()
     }

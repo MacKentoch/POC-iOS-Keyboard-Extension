@@ -1,4 +1,3 @@
-// KeyboardActivationInstructionsView.swift
 import SwiftUI
 
 struct KeyboardActivationInstructionsView: View {
@@ -34,7 +33,7 @@ struct KeyboardActivationInstructionsView: View {
                 Image(systemName: "3.circle.fill")
                     .font(.title)
                     .foregroundColor(.blue)
-                Text("Appuyez sur **Ajouter un clavier...** et sélectionnez **MonClavierExtension — MonClavierApp** dans la liste.")
+                Text("Appuyez sur **Ajouter un clavier...** et sélectionnez **MonClavierApp** dans la liste.")
             }
             
             // Instruction 4
@@ -47,7 +46,6 @@ struct KeyboardActivationInstructionsView: View {
             
             Spacer()
             
-            // Le bouton qui ouvre l'application Réglages
             Button(action: {
                 openSettings()
             }) {
@@ -63,9 +61,8 @@ struct KeyboardActivationInstructionsView: View {
                 .cornerRadius(10)
             }
             
-            // Bouton pour fermer cette feuille d'instructions
             Button("Terminé") {
-                dismiss() // Ferme la vue
+                dismiss()
             }
             .frame(maxWidth: .infinity)
             .padding(.top, 10)
