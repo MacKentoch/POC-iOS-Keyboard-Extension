@@ -34,7 +34,7 @@ struct KeyboardActivationInstructionsView: View {
                 Image(systemName: "3.circle.fill")
                     .font(.title)
                     .foregroundColor(.blue)
-                Text("Appuyez sur **Ajouter un clavier...** et sélectionnez **MonClavierExtension — MonClavierApp** dans la liste.")
+                Text("Appuyez sur **Ajouter un clavier...** et sélectionnez **MonClavierApp** dans la liste.")
             }
             
             // Instruction 4

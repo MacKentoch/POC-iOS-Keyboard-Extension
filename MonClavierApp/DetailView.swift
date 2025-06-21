@@ -12,7 +12,7 @@ struct DetailView: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
             
-            Text("! . .")
+            Text("SOMETHING")
                 .font(.title)
                 .foregroundColor(.secondary)
             
