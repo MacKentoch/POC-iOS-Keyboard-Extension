@@ -1,55 +1,51 @@
-//
-//  ContentView.swift
-//  MonClavierApp
-//
-//  Created by Rav3n on 11/06/2025.
-//
-
+// ContentView.swift
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    // État pour contrôler l'affichage de la feuille d'instructions
+    @State private var showInstructions = false
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationStack {
+            VStack(spacing: 40) {
+                
+                NavigationLink(destination: DetailView()) {
+                    VStack {
+                        Image(systemName: "photo.on.rectangle.angled")
+                            .font(.system(size: 100))
+                        Text("IMAGE")
+                            .font(.title)
+                            .fontWeight(.bold)
                     }
+                    .padding(40)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(10)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
+                .buttonStyle(.plain)
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
+                // Le bouton n'ouvre plus directement les réglages.
+                // Il affiche la feuille d'instructions.
+                Button(action: {
+                    showInstructions = true
+                }) {
+                    Text("Activer mon clavier") // Texte plus descriptif
+                        .fontWeight(.bold)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+                Spacer()
+            }
+            .padding(.top, 20)
+            .navigationTitle("Mon clavier extension")
+            // .sheet est un modificateur qui présente une nouvelle vue par-dessus l'actuelle.
+            .sheet(isPresented: $showInstructions) {
+                // Lorsque showInstructions devient true, cette vue est présentée.
+                KeyboardActivationInstructionsView()
             }
         }
     }
@@ -57,5 +53,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
