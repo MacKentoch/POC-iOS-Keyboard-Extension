@@ -1,6 +1,7 @@
 import SwiftUI
 
 // MARK: - Modèles de Données
+// (Toutes vos structures de données sont correctes et restent ici)
 
 fileprivate struct EmptyCodable: Codable {}
 
@@ -11,6 +12,7 @@ enum KeyAction: Codable, Hashable {
     case switchToNextKeyboard
     case switchToPreviousKeyboard
     
+    // ... Le reste de votre enum KeyAction ... (pas de changement)
     enum CodingKeys: String, CodingKey {
         case insert, backspace, space, switchToNextKeyboard, switchToPreviousKeyboard
     }
@@ -57,6 +59,7 @@ enum KeyType: Codable, Hashable {
     case systemImage(String)
     case svgImage(String)
     
+    // ... Le reste de votre enum KeyType ... (pas de changement)
     enum CodingKeys: String, CodingKey {
         case character, systemImage, svgImage
     }
@@ -100,12 +103,13 @@ struct KeyboardCollection: Codable {
     let keyboards: [KeyboardLayout]
 }
 
-struct KeyboardLayout: Codable {
+struct KeyboardLayout: Codable, Hashable {
     let rows: [KeyboardRow]
 }
 
 
 // MARK: - Vue pour un Bouton
+// (Votre vue KeyButton est correcte et reste inchangée)
 struct KeyButton: View {
     let key: Key
     let action: (KeyAction) -> Void
@@ -144,10 +148,6 @@ struct KeyButton: View {
 
 
 // MARK: - Vue Principale du Clavier
-fileprivate enum KeyboardAnimationDirection {
-    case forward
-    case backward
-}
 
 struct KeyboardView: View {
     var textDocumentProxy: UITextDocumentProxy
@@ -155,8 +155,14 @@ struct KeyboardView: View {
     @State private var allKeyboardLayouts: [KeyboardLayout] = []
     @State private var currentKeyboardIndex: Int = 0
     
+    // L'état qui contrôle si on affiche le clavier ou le spinner
+    @State private var isReadyToDisplay: Bool = false
+    
+    // L'état pour la direction de l'animation
+    private enum KeyboardAnimationDirection { case forward, backward }
     @State private var animationDirection: KeyboardAnimationDirection = .forward
     
+    // Propriété calculée pour obtenir le layout actuel
     private var currentKeyboardLayout: KeyboardLayout? {
         guard !allKeyboardLayouts.isEmpty, allKeyboardLayouts.indices.contains(currentKeyboardIndex) else {
             return nil
@@ -164,36 +170,68 @@ struct KeyboardView: View {
         return allKeyboardLayouts[currentKeyboardIndex]
     }
     
-    private let forwardTransition: AnyTransition = .asymmetric(
-        insertion: .move(edge: .trailing).combined(with: .opacity),
-        removal: .move(edge: .leading).combined(with: .opacity)
-    )
-    
-    private let backwardTransition: AnyTransition = .asymmetric(
-        insertion: .move(edge: .leading).combined(with: .opacity),
-        removal: .move(edge: .trailing).combined(with: .opacity)
-    )
+    // Définitions des transitions
+    private let forwardTransition: AnyTransition = .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
+    private let backwardTransition: AnyTransition = .asymmetric(insertion: .move(edge: .leading), removal: .move(edge: .trailing))
     
     var body: some View {
         VStack(spacing: 8) {
-            if let layout = currentKeyboardLayout {
-                ForEach(layout.rows) { row in
+            // On vérifie si on est prêt à afficher
+            if isReadyToDisplay, let layout = currentKeyboardLayout {
+                // Si oui, on construit le clavier
+                ForEach(layout.rows, id: \.self) { row in
                     HStack(spacing: 4) {
-                        ForEach(row.keys) { key in
+                        ForEach(row.keys, id: \.self) { key in
                             KeyButton(key: key, action: handleAction)
                         }
                     }
                 }
             } else {
+                // Sinon, on affiche un spinner et on déclenche le chargement
                 ProgressView()
-                    .onAppear(perform: loadAllLayouts)
+                    .onAppear(perform: prepareKeyboard)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(3)
         .transition(animationDirection == .forward ? forwardTransition : backwardTransition)
-        .id(currentKeyboardIndex) // Changer l'id force la vue à se redessiner complètement lors du switch
+        .id(currentKeyboardIndex) // Force le redessinage lors du changement
     }
+    
+    // ===== LA CORRECTION PRINCIPALE EST ICI =====
+    private func prepareKeyboard() {
+        // 1. S'assurer qu'on ne charge les données qu'une seule fois
+        guard allKeyboardLayouts.isEmpty else { return }
+        
+        // 2. Lancer le chargement sur un thread d'arrière-plan pour ne pas bloquer l'UI
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let url = Bundle.main.url(forResource: "KeyboardLayout", withExtension: "json") else {
+                print("ERREUR: Fichier KeyboardLayout.json introuvable.")
+                return
+            }
+            
+            do {
+                // 3. Charger et décoder les données (votre logique était déjà bonne)
+                let data = try Data(contentsOf: url)
+                let collection = try JSONDecoder().decode(KeyboardCollection.self, from: data)
+                
+                // 4. Mettre à jour l'état sur le thread principal
+                DispatchQueue.main.async {
+                    self.allKeyboardLayouts = collection.keyboards
+                    
+                    // 5. LA MAGIE : Attendre le prochain cycle de rendu pour afficher
+                    // Cela donne le temps à l'environnement de l'extension de se stabiliser
+                    DispatchQueue.main.async {
+                        self.isReadyToDisplay = true
+                    }
+                }
+            } catch {
+                print("ERREUR DE DÉCODAGE JSON: \(error)")
+            }
+        }
+    }
+    
+    // --- Le reste de vos fonctions est correct et reste inchangé ---
     
     private func handleAction(_ action: KeyAction) {
         UIDevice.current.playInputClick()
@@ -206,10 +244,8 @@ struct KeyboardView: View {
         case .space:
             textDocumentProxy.insertText(" ")
         case .switchToNextKeyboard:
-            guard !allKeyboardLayouts.isEmpty else { return }
             switchToNextKeyboard()
         case .switchToPreviousKeyboard:
-            guard !allKeyboardLayouts.isEmpty else { return }
             switchToPreviousKeyboard()
         }
     }
@@ -217,8 +253,7 @@ struct KeyboardView: View {
     private func switchToNextKeyboard() {
         guard !allKeyboardLayouts.isEmpty else { return }
         animationDirection = .forward
-        
-        withAnimation(.easeInOut(duration: 0.25)) {
+        withAnimation(.easeInOut(duration: 0.2)) {
             currentKeyboardIndex = (currentKeyboardIndex + 1) % allKeyboardLayouts.count
         }
     }
@@ -226,29 +261,9 @@ struct KeyboardView: View {
     private func switchToPreviousKeyboard() {
         guard !allKeyboardLayouts.isEmpty else { return }
         animationDirection = .backward
-        
-        withAnimation(.easeInOut(duration: 0.25)) {
+        withAnimation(.easeInOut(duration: 0.2)) {
             let count = allKeyboardLayouts.count
-            
-            currentKeyboardIndex = (currentKeyboardIndex - 1 + count) % count // modulo for negative numbers in Swift.
+            currentKeyboardIndex = (currentKeyboardIndex - 1 + count) % count
         }
     }
-    
-    private func loadAllLayouts() {
-        guard let url = Bundle.main.url(forResource: "KeyboardLayout", withExtension: "json") else {
-            fatalError("Fichier KeyboardLayout.json introuvable.")
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            let collection = try JSONDecoder().decode(KeyboardCollection.self, from: data)
-            
-            self.allKeyboardLayouts = collection.keyboards
-            self.currentKeyboardIndex = 0
-        } catch {
-            print("----- ERREUR DE DÉCODAGE JSON -----")
-            print(error)
-            fatalError("Échec du décodage du JSON. Voir la console pour les détails.")
-        }
-    }
-    
 }

@@ -34,8 +34,6 @@ struct SVGView: View {
                 print("⚠️ Erreur: Impossible de parser le fichier SVG à l'URL : \(svgURL)")
                 return
             }
-            // fix 1st render random error
-            svgImage.size = CGSize(width: 100, height: 100)
                     
             DispatchQueue.main.async {
                 self.uiImage = svgImage.uiImage
