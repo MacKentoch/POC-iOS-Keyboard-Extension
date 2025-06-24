@@ -16,6 +16,20 @@
 		1BC6992F2DFEA7EE00AA27F8 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1BC6992E2DFEA7EE00AA27F8 /* SVGKitSwift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		1B72AB472E07F0E600A081EA /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = text.plist;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		1B64E85A2DF9514600381038 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -247,6 +261,7 @@
 				1B64E8782DFA8A4F00381038 /* Resources */,
 			);
 			buildRules = (
+				1B72AB472E07F0E600A081EA /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
